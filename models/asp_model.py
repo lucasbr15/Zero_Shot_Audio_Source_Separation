@@ -663,7 +663,7 @@ class AutoTaggingWarpper(pl.LightningModule):
         sources = {}        
         at_sources = {}
         preds = {}
-        mini_batch = 24
+        mini_batch = 6
         segment_len = self.config.hop_samples * self.config.segment_frames
         n_samples = int(batch.shape[-1] / segment_len) * segment_len
         # resize the batch
@@ -760,7 +760,7 @@ class SeparatorModel(pl.LightningModule):
         sources = {}        
         at_sources = {}
         preds = {}
-        mini_batch = 8 # fixed as a small number
+        mini_batch = 2 # fixed as a small number
         segment_len = self.config.hop_samples * self.config.segment_frames
         n_samples = int(batch.shape[-1] / segment_len) * segment_len
         # resize the batch
